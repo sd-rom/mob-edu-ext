@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "mob-edu-ext",
+  "version": "1.0",
+  "description": "Отправка ответа по Ctrl+Enter, включение ссылок на разделы, удаление декораций",
+  "content_scripts": [
+    {
+      "matches": ["https://kb.mob-edu.ru/*"],
+      "js": ["ctrl-enter.js", "fix-nav.js"],
+      "css": ["custom.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}

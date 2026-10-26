@@ -1,0 +1,44 @@
+/* Убираем тени у всех элементов */
+* { box-shadow: none !important; }
+
+/* Скрываем горизонтальные линии-разделители */
+[class*="divider"] { display: none; }
+
+/* Убираем белые полосы между заданиями (чересполосицу) */
+[class*="LessonItem"] { gap: 0 !important; }
+
+/* Убираем скругление углов, чтобы строки сливались в единый список */
+[class*="SectionRow"] { border-radius: 0 !important; }
+
+/* Настройка поля ввода кода (IDE) */
+[class*="AnswersZOO_textarea"] {
+    field-sizing: content;
+    height: auto !important;
+    min-height: 134px !important;
+    max-height: none !important;
+    resize: vertical !important;
+    font-family: ui-monospace, Consolas, monospace !important;
+}
+
+/* Делаем фоны главных контейнеров прозрачными */
+html,
+body,
+#root,
+[class*="Panel_root"],
+[class*="Quiz_content"] {
+    background: none !important;
+    background-image: none !important;
+    background-color: transparent !important;
+}
+
+/* Убираем внутренние отступы */
+[class*="Quiz_content"],
+[class*="GlassLayoutNew_appnav"] {
+    padding: 0 !important;
+}
+
+/* Выравниваем логотип влево */
+[class*="AppNav_logo__"] {
+    justify-content: flex-start !important;
+    margin-left: -12px !important;
+}
